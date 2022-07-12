@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FacultyLogin</title>
+    <style>
+        body{
+            background:-moz-repeating-radial-gradient(ellipse,rgb(132, 67, 134),rgb(153, 71, 71),rgb(175, 158, 63));
+            line-height: 20px;
+        }
+        fieldset{
+            background-color: chartreuse;
+            display: inline-block;
+            position: relative;
+            top:200px;
+            left:40%;
+            border:10px solid red;
+        }
+        fieldset input{
+            float:right;
+            border:5px solid;
+        }
+        fieldset label{
+            float:left;
+            margin:3px;
+            font-weight:bold;
+        }
+        legend{
+            font-size: 2rem;
+            font-weight: bold;
+            color:blue;
+            /* background-color:coral; */
+        }
+    </style>
+</head>
+<body>
+    <form action='home.html' onsubmit="return validate()">
+        <fieldset>
+            <legend>Faculty Login</legend>
+            <label>User Id:</label><input type='text' placeholder="User ID:" id='facid'>  <br>
+            <label>PassWord:</label><input type='password' placeholder="password"><br>
+            <input type='submit'>
+            <div id='warning'></div>
+        </fieldset>
+    </form>
+    <script>
+        function validate(){
+            var j=document.getElementById('facid').value;
+            var t=/^1\d{2}$/
+            if(!(t.test(j))){
+               var l= document.getElementById('warning');
+                l.innerText='Please Enter Valid Id';
+                l.style.color='red';
+                return false;
+            }
+            return true;
+        }
+        
+    </script>
+</body>
+</html>

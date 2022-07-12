@@ -1,0 +1,289 @@
+#title{
+    display: inline-block;
+    position:absolute;
+    top:10px;
+    left:20%;
+}
+#title:hover{
+    cursor: pointer;
+}
+
+span:hover{
+    cursor: pointer;
+}
+body{
+    background:-moz-repeating-radial-gradient(ellipse,rgb(240,240,240),rgb(200,200,200),rgb(160,160,160)) ;
+}
+a{
+    text-decoration: none;
+    color:white;
+}
+#name{
+    display: flex;
+    justify-content: center;
+    
+}
+#name img{
+    border-radius: 50%; 
+}
+#name:hover img{
+    display:none;
+   
+}
+
+nav{
+    position:sticky;
+    top:0px;
+    padding:0px 0px;
+    background-color:black;
+    color:white;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.lists > li{
+    margin:10px 100px 2px 100px;
+    padding:5px 10px;
+    list-style-type:none;
+    display: inline;
+    border:2px solid orange;
+    background-color: rgb(100,100,100);
+}
+#branch,#branch-2{
+    position: relative;
+    display: inline-block;
+}
+.down{
+    position: absolute;
+    display:none;
+    top:25px;
+    left:-50%;
+    z-index:1;
+}
+.down li,aside li{
+    border:2px solid yellow;
+    background-color: rgb(50,50,50);
+    display:block;
+    padding:10px 20px;
+}
+.side{
+    position: absolute;
+    display: none;
+    left:35%;
+    top:0px;
+    z-index:1;  
+}
+
+aside{
+    position:absolute;
+    right:0px;
+    width:20%;
+    height: 600px;
+    float:right;
+    text-align: center;
+    color:white;
+    background-color: rgb(50,50,50);
+
+    /* display:flex;
+    flex-direction: column;
+    align-items: center; */
+
+    display: none;
+    z-index: 1;
+    cursor:hand;
+}
+
+#container{
+    display: flex;
+}
+#search{
+    width: 20%;
+    box-sizing: border-box;
+    float: left;
+    /* position: absolute;
+    left:0px; */
+    height: 700px;
+    background-color: rgb(77, 72, 66);
+}
+#search{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#search li{
+    list-style-type:none;
+    list-style-position: inside;
+    border:2px solid white;
+    background-color: burlywood;
+    display: inline-block;
+    width:80%;
+    padding: 5px;
+
+}
+#search input[type=text]{
+    height:30px;
+    margin-top:2px;
+}
+
+
+aside ol{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    position:absolute;
+    right:5%;
+    width:90%;
+}
+aside li{
+    margin-top:10px;
+    list-style-type:none;
+    padding-top:20px;
+}
+li:hover{
+     background-color: blue;
+}
+
+#main{
+    box-sizing: border-box;
+    float: left;
+    position: relative;
+    /* position: absolute;
+    left: 20%; */
+    background-color:white;
+    width: 60%;
+    height: 500px;
+    margin:1px;
+    z-index: -1;
+    color:white;
+}
+
+/* #left{
+    font-size: 50px;
+    position:absolute;
+    top:50%;
+    left:0%;
+    z-index:1;
+    background-color: black;
+}
+#left:hover{
+    cursor: pointer;
+}
+#right{
+    font-size: 50px;
+    position:absolute;
+    top:50%;
+    right:0%;
+    z-index: 1;
+    background-color: black;
+} */
+#notify{
+    box-sizing: border-box;
+    float:left;
+    /* position: absolute;
+    right:0px; */
+    width: 20%;
+    height: 700px;
+    background-color:rgb(77, 72, 66);
+    z-index:-1;
+    padding-top:20px;
+}
+#notify div{
+    margin:0% 5%;
+    border:2px solid white;
+    background-color: burlywood;
+    padding:3px 1px;
+}
+
+#attention li{
+    padding:10px;
+    border:1px solid black;
+    border-radius: 50%;
+    list-style-type: none;
+    display:inline-block;
+}
+#attention{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.foot{
+    width: 100%;
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    background-color:rgb(8, 8, 8);
+    color:white;
+}
+.foot #content{
+    text-align: center;
+    width:60%;
+    float:left;
+}
+.foot .counter{
+    margin-right: 0px;
+    width:30%;
+    float:right;  
+}
+
+.foot #up img{
+    position: fixed;
+    right: 0px;
+    width: 3%;
+    height:40px;
+}
+
+
+
+/* #slideE{
+    animation: trans1 1s ease-in-out 0s infinite;
+} */
+/* @keyframes trans{
+    0%{
+        opacity:0.5;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0.5;
+    }
+}
+
+@keyframes trans1{
+    0%{
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-200%);
+    }
+} */
+
+
+@media all and (max-width:600px){
+     .lists>li{
+         display: block;
+         width: 100%;
+         margin-left: 0px;
+     }
+     #option{
+         position: fixed;
+         top:0px;
+         right: 0px;
+         width: 10%;
+         z-index: 1;
+     }
+     nav{
+         width: 100%;
+     }
+     header b{
+         position: absolute;
+         top:0px;
+         left:0px;
+         font-size: 0.5rem;
+         z-index:-1;
+
+     }
+}

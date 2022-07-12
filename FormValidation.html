@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body{
+            
+            background-color: rgb(28, 177, 140);
+        }
+        #log{
+            background-color: blue;
+        }
+        input{
+            border:3px solid gray;
+        }
+        #main{
+            background-size:100% 100%;
+            margin:100px 300px 100px 200px;
+            border-radius: 10%;
+            border:5px solid blue;
+            background-color: cyan;
+            padding:100px 0% 100px 10%;
+            position: relative;
+        }
+        #mail{
+            border:2px solid slateblue;
+            position:absolute;
+            top:20px;
+            right:50px;
+            font-size:2rem;
+            display:inline;
+            background-color: blue;
+        }
+        h1{
+            position:absolute;
+            top:20px;
+            right:50%;
+            text-decoration: underline;
+        }
+        table{
+            font-size:25px;
+        }
+        table input[type='text'],table input[type='password']{
+            width:100%;
+        }
+        input:read-only{
+            background-color: rgb(124, 134, 134);
+        }
+        img{
+            margin-top: 2px;;
+        }
+        #lists li{
+            border:2px solid cadetblue;
+            background-color: coral;
+        }
+        #lists li button{
+            float: right;
+        }
+        #info{
+            display:none;
+            background-color: green;
+        }
+        #details{
+            display: block;
+        }
+        
+    </style>
+</head>
+<body >
+   <!-- onload='Agecalc()' -->
+    <div id='main'>
+        <h1>Fill Details</h1>
+        <div id='mail' onclick='reFresh()'>Login </div>
+        
+        <div  id='info'>
+        <table>
+        <form action='hi.php'>
+            <tr><td>UserName:</td><td><input type='text'></td><td>*</td></tr>
+            <tr><td>Password:</td><td><input type='password' id='pswd'></td><td>&nbsp;<div onclick='dis()'style='display:inline-block; width='30px' ><img src='show.png' height="20px" width="20px" id='show'></div></td></tr>
+            <tr><td></td><td><input type='submit'></td></tr>
+        </form>
+        </table>
+        </div>
+
+        <div id='details'>
+            <table>
+                <form action='hi.php' onsubmit="return validity()" >
+                <tr><td>UserName:</td><td><input type='text'></td><td>*</td></tr>
+                <tr><td>FirstName:</td><td><input type="text" id='fn' name='f'></td><td id='inv1'>*</td></tr>
+                <tr><td>MiddleName:</td><td><input type="text" id='mn' name='m'></td><td>optional</td></tr>
+                <tr><td>LastName:</td><td><input type="text" id='ln' name='l'></td><td id='inv2'>*</td></tr>
+                <tr><td>FullName:</td><td><input type="text" id='fln' name='fl' readonly></td></tr>
+                <tr><td>Country:</td><td><select id='sel'>
+                    <option>India</option>
+                    <option>USA</option>
+                </select id='state' name='s'></td></tr>
+                <tr><td>PhoneNumber:</td><td><input type='text' id='phn' ></td></tr>
+                <tr><td>Password:</td><td><input type='password' id='pswd'></td><td>&nbsp;<div onclick='dis()'style='display:inline-block; width='30px' ><img src='show.png' height="20px" width="20px" id='show'></div></td></tr>
+                <tr><td>Hobbies</td><td><input type='text' placeholder="Enter Your Hobby:" id='hobby'></tr>
+                <tr><td></td><td><button onclick='add()'>ADD:</button></tr>
+                <tr><td></td>
+                    <td>
+                    <ol id='lists'>
+                    </ol>
+                    </td>
+                </tr>
+                
+                </td></tr>
+        
+                <tr><td>Image:</td><td><input type="file"  alt='submit' id='im' accept="image"></td></tr>
+                <tr><td>DOB:</td><td><input type='date' id='dob' onblur="Agecalc()"></td></tr>
+                <tr><td>AGE:</td><td><input type='text' id='age' readonly></td><td id='inv3'></td></tr>
+                <tr><td align="right"><input type='checkbox' height="10px" id='agree'></td><td>I agree to the Terms and</td> <td>Conditions</td></tr>
+                <tr><td></td><td><input type='submit'></td></tr>
+                <tr><td></td><td><button onclick="restore()">Reset</button></td></tr>
+            </form>
+            <table>
+        </div>
+    </div>
+    <script src='validate.js'></script>
+</body>
+</html>
